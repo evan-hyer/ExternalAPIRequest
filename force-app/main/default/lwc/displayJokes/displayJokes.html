@@ -1,0 +1,31 @@
+<template>
+  <lightning-card title="Joke Display">
+    <p>This is a {type} type joke.</p>
+
+    <template if:true={setup}>
+      <p>{setup}</p>
+      <p>{delivery}</p>
+    </template>
+    <template if:true={joke}>
+      <p data-id="joke">{joke}</p>
+    </template>
+    <template if:true={category}>
+      <p class="slds-text-title_bold slds-var-m-horizontal_large">
+        Category: {category}
+      </p>
+    </template>
+    <template if:true={error}>
+      <p class="slds-text-color_weak slds-var-m-horizontal_large">
+        No joke to display. Error: {error}
+      </p>
+    </template>
+    <div class="slds-p-top_large slds-m-horizontal_large">
+      <lightning-button
+        data-id="jokeButton"
+        class="slds-var-p-top_large"
+        label="Regenerate Joke"
+        onclick={handleRegenerateClick}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>
