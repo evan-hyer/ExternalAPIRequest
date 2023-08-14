@@ -1,6 +1,12 @@
 # API External Callout Helper
 
-This is supposed to demosrate the power of the builder design pattern and how to enable customizations for different api types and types
+This is supposed to demostrate the power of the builder design pattern and how to enable customizations for different api types and types. In this repo's example under the folder 'force-app/main/default/classes/' you can see 'ExternalAPIRequest' class which is how the builder pattern in instrumented, in the 'RetrieveJokes' class you can see how to instatiate the builder methods. 'ExternalAPIRequest' demostrates will how you can easily build common API request objects for different APIs without having to duplicating common logic/patterns that every REST API needs such as the HttP Method, Request header and body.
+
+## Why is the builder pattern so great?
+
+Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.
+
+source for inspiration: https://refactoring.guru/design-patterns/builder
 
 ## Additional details
 
